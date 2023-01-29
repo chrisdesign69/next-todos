@@ -1,0 +1,24 @@
+$gr1: #009ed8;
+$gr2: #1c166e;
+$gr3: #e356bb;
+
+@mixin bg {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 11px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
+    0px 0px, 23px -24px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      57% 67% at 7% 62%,
+      #1c166eff 6%,
+      #073aff00 100%
+    ),
+    radial-gradient(35% 56% at 91% 74%, #8a4ffff5 9%, #073aff00 100%),
+    radial-gradient(74% 86% at 67% 38%, #1c166e 5%, #073aff00 100%),
+    linear-gradient(212deg, #009ed8 1%, #e356bb 100%);
+}
+
+
+@mixin bg1 {
+    background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: radial-gradient(75% 75% at 50% 50%, #3960BBFF 0%, #22283DFF 80%);
+}

@@ -1,0 +1,61 @@
+@use '_Variables.module.scss' as *;
+
+// Default Mixins
+
+@mixin gridRoot {
+  display: grid;
+  grid-template-rows: 5rem 1fr 5rem;
+}
+
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin borderNone {
+  outline: 1px solid transparent;
+}
+
+@mixin borderWhite {
+  outline: 1px solid $white;
+}
+
+@mixin borderRed {
+  outline: 1px solid red;
+}
+
+@mixin borderBlue {
+  outline: 1px solid rgb(27, 27, 246);
+}
+
+@mixin borderGreen {
+  outline: 1px solid rgb(13, 223, 48);
+}
+
+//=================================================================Root
+@mixin boxShadow1 {
+  -webkit-box-shadow: 0px 0px 13px 5px rgba(33, 33, 33, 0.67);
+  box-shadow: 0px 0px 13px 5px rgba(33, 33, 33, 0.67);
+}
+
+//=================================================================Root
+@mixin borderGradient {
+  // border: 2px solid;
+  // border-image: linear-gradient(45deg, $papaya2, $papaya, $papaya2) 1;
+  // border-radius: 15px;
+
+  background: linear-gradient($blue, $blueLight) padding-box,
+    linear-gradient(45deg, $papaya2, $papaya, $papaya2) border-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}

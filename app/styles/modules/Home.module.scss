@@ -1,0 +1,25 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.container{
+    display: grid;
+    grid-template-rows: 2rem 2rem auto 2rem;
+    gap: 1rem;
+    @include borderGradient;
+    width: 20rem;
+    height: 30rem;
+   
+    // .title{
+    //     @include borderBlue;
+    // }
+    // .input{
+    //     @include borderBlue;
+    // }
+    // .listTodo{
+    //     @include borderBlue;
+    // }
+    // .controller{
+    //     @include borderBlue;
+    // }
+}

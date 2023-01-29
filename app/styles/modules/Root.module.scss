@@ -1,0 +1,42 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.root {
+  min-height: 100vh;
+  @include bg;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include flexColumn;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  font-size: 0.8rem;
+  font-size: clamp(
+    0.8rem,
+    0.5818181818181819rem + 1.0909090909090906vw,
+    1.4rem
+  );
+  letter-spacing: 1px;
+}
+
+.container {
+  @include gridRoot;
+  @include boxShadow1;
+  @include bg1;
+  width: clamp(20rem, 75rem, 100vw);
+  height: 100vh;
+  color: white;
+
+  // header{
+  //     @include borderRed;
+  // }
+  // footer{
+  //     @include borderRed;
+  // }
+  main{
+    @include gridCenter;
+    
+  }
+}

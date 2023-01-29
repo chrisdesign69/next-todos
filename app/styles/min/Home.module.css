@@ -1,0 +1,1 @@
+.container{display:grid;grid-template-rows:2rem 2rem auto 2rem;gap:1rem;background:linear-gradient(#203365, #173d9b) padding-box,linear-gradient(45deg, #b95e22, #f5853b, #b95e22) border-box;border:2px solid transparent;border-radius:5px;width:20rem;height:30rem}
