@@ -2,23 +2,38 @@
 @use '_Mixins.module.scss' as *;
 @use '_Gradients.module.scss' as *;
 
+//Loader
+.loading{
+    @include flexRow;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    color:  white;
+    font-size: .6rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
 .container{
     display: grid;
-    grid-template-rows: 2rem 2rem auto 2rem;
+    grid-template-rows: 2rem 3rem auto 2rem;
     gap: 1rem;
     @include borderGradient;
     width: 20rem;
     height: 30rem;
    
-    // .title{
-    //     @include borderBlue;
-    // }
+    .title{
+        @include gridCenter;
+        translate: 0px 6px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
     // .input{
-    //     @include borderBlue;
+    //     text-align: center;
     // }
-    // .listTodo{
-    //     @include borderBlue;
-    // }
+    .listTodo{
+        @include gridCenter;
+    }
     // .controller{
     //     @include borderBlue;
     // }

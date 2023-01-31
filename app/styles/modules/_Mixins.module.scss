@@ -53,9 +53,20 @@
   // border: 2px solid;
   // border-image: linear-gradient(45deg, $papaya2, $papaya, $papaya2) 1;
   // border-radius: 15px;
-
+  
   background: linear-gradient($blue, $blueLight) padding-box,
-    linear-gradient(45deg, $papaya2, $papaya, $papaya2) border-box;
+  linear-gradient(45deg, $papaya2, $papaya, $papaya2) border-box;
   border: 2px solid transparent;
   border-radius: 5px;
+}
+
+//============================================================Completed
+@mixin completedMixin{
+  cursor: pointer;
+            border: 1px solid $papaya;
+            border-radius: 2px;
+            padding-block: .2rem;
+            padding-inline: .8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
 }

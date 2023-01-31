@@ -1,0 +1,19 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.container{
+    @include flexRow;
+    justify-content: space-around;
+    width: 60%;
+    margin-inline: auto;
+    translate:  0px -1.1rem;
+    .completeAll{
+        color: $green;
+    }
+    .delete{
+        color: $papaya;
+        translate:  0px .1rem;
+        cursor: pointer;
+    }
+}

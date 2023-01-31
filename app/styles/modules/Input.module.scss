@@ -1,0 +1,43 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.container{
+    @include flexColumn;
+    .inputContainer{
+        @include flexColumn;
+        align-items: center;
+        justify-content: space-around;
+        width: 70%;
+        margin-inline: auto;
+        .nestedContainer{
+            height: 1.5rem;
+            @include flexRow;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding-inline-start: .2rem;
+            color: white;
+            letter-spacing: 1px;
+            border: 1px solid $papaya2;
+            height: 1.5rem;
+            border-radius: 2px;
+        }
+        .submit{
+            translate: 0px 3px;
+            color: $papaya;
+            cursor: pointer;
+        }
+    }
+   }
+   .errorMsg{
+    color: $papaya;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+   }
+}

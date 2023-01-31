@@ -1,0 +1,52 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.container{
+    @include borderGradient;
+    height: 80%;
+    width: 80%;
+    @include flexColumn;
+    .itemsContainer{
+        margin-block-start: 1rem;
+        margin-inline: auto;
+        width: 80%;
+        @include flexRow;
+        align-items: center;
+        justify-content: space-between;
+        height: 1.8rem;
+        border: 1px solid $papaya;
+        
+        p{
+            margin-inline-start: .2rem;
+        }
+        .icons{
+            margin-inline-end: .2rem;
+            @include flexRow;
+            justify-content: space-around;
+            width: 40%;
+            cursor: pointer;
+            .edit{
+                color: $yellow;
+                font-size: .8rem;
+                translate: 0px 2px;
+            }
+            .delete{
+                color: $papaya;
+                font-size: .9rem;
+                translate: 0px 2px;
+            }
+            .complete{
+                color: $green;
+                font-size: .9rem;
+                translate: 0px 2px;
+            }
+        }
+    }
+}
+
+.centerMe{
+    @include gridCenter;
+    height: 100%;
+    color: $papaya;
+}

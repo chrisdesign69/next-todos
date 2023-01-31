@@ -1,0 +1,30 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+.container{
+    @include borderGradient;
+    @include gridCenter;
+    grid-template-rows: 2rem 1fr 2rem;
+    width: 20rem;
+    gap: 1rem;
+    padding-block: 1rem;
+    h3{
+        background-color: $red;
+    }
+    .controllerContainer{
+        // background-color: $papaya2;
+        @include flexRow;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        .back{
+            @include completedMixin;
+        }
+        .delete{
+            @include completedMixin;
+            border: 1px solid $red;
+            color: $red;
+        }
+    }
+}
