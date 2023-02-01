@@ -77,10 +77,25 @@ const completeOne = async(id) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({id})
     }
+    
+    const res = await fetch( endpoint, config)
+    return res.json()
+}
 
+//==============================================updateOne
+const updateOne = async(data) => {
+    // console.log(`data.........${data.todo}`)
+    // console.log(`id.........${data.id}`)
+    const endpoint = `${url}/api/update-one/${data.id}`
+    const config = { 
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    }
+    
     const res = await fetch( endpoint, config)
     return res.json()
 }
 
 export { getTodos, getAllCompleted, addTodo, 
-    deleteAll, deleteAllCompleted, deleteOne, completeOne }
+    deleteAll, deleteAllCompleted, deleteOne, completeOne, updateOne }

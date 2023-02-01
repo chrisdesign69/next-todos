@@ -14,7 +14,7 @@ const Items = ({todo, id}) => {
         <div className={styles.itemsContainer}>
             <p className={styles.todo}>{todo}</p>
             <div className={styles.icons}>
-                <Suspense fallback={<Loader />}><EditComponent /></Suspense>
+                <Suspense fallback={<Loader />}><EditComponent id={id} currentTodo={todo} /></Suspense>
                 <Suspense fallback={<Loader />}><DeleteComponent id={id}/> </Suspense>
                 <Suspense fallback={<Loader />}><CompleteOneComponent id={id}/></Suspense>
             </div>

@@ -1,0 +1,50 @@
+@use '_Variables.module.scss' as *;
+@use '_Mixins.module.scss' as *;
+@use '_Gradients.module.scss' as *;
+
+
+
+
+.container{
+    @include borderGradient;
+    width: 20rem;
+    @include gridCenter;
+    gap: 2rem;
+    padding-block: 1rem;
+    .currentTodo{
+        color: $papaya;
+        opacity: .5;
+        letter-spacing: 1px;
+    }
+    .back{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $green;
+    }
+}
+.inputContainer{
+    @include gridCenter;
+    grid-template-columns: 1fr 3rem;
+    // @include borderRed;
+    width: 80%;
+    height: 1.4rem;
+    input{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border: 1px solid $papaya2;
+        border-radius: 2px;
+        height: 1.4rem;
+        padding-inline-start: .2rem;
+        color: $papaya;
+        letter-spacing: 1px;
+    }
+    .submit{
+        color: $yellow;
+    }
+    .error{
+        color: $papaya;
+        font-size: .6rem;
+        letter-spacing: 1px;
+    }
+}

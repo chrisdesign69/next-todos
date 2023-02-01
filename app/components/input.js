@@ -42,7 +42,7 @@ const Input = () => {
             submitHandler={submitHandler}
             />
             </Suspense></div>
-            <ErrorMsg />
+            <ErrorMsg errors={errors} />
         </div>
     )
 }

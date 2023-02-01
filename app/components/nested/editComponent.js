@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link'
 
 //Icons
 import { TfiPencilAlt } from "react-icons/tfi"
@@ -8,11 +9,9 @@ import { TfiPencilAlt } from "react-icons/tfi"
 //Styles
 import styles from "app/styles/min/ListTodos.module.css"
 
-const editHandler = () => console.log("edit");
-
-const EditComponent = () => {
+const EditComponent = ({id, currentTodo}) => {
     return (
-        <div className={styles.edit}><TfiPencilAlt /></div>
+        <Link className={styles.edit} href={`/update-one/${currentTodo}/${id}`}><TfiPencilAlt /></Link>
     )
 }
 
